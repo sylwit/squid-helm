@@ -1,0 +1,15 @@
+{{- if .Values.config.data }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "squid.fullname" . }}-conf
+  labels:
+    {{- include "squid.labels" . | nindent 4 }}
+  {{- with .Values.config.annotations }}
+  annotations:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+data:
+  squid.conf: |
+  {{- .Values.config.data | nindent 4 }}
+{{- end }}

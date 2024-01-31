@@ -1,0 +1,25 @@
+apiVersion: v2
+name: squid
+description: A Helm chart for Kubernetes to deploy squid-proxy
+home: http://www.squid-cache.org/
+icon: http://www.squid-cache.org/Artwork/SN2.png
+
+type: application
+
+version: 0.1.0
+appVersion: "5.2-22.04_beta"
+
+keywords:
+  - proxy
+  - network
+  - cache
+
+maintainers:
+  - name: sylwit
+    email: me@sylwit.com
+
+annotations:
+  "artifacthub.io/license": MIT
+  "artifacthub.io/links": |
+    - name: Chart Source
+      url: https://github.com/sylwit/squid-helm
