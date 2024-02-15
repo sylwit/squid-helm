@@ -108,7 +108,6 @@ config:
   # acl localnet src
 
 metrics:
-  # this image is only available for linux/amd64
   enabled: false
   exporter:
     port: 9301
